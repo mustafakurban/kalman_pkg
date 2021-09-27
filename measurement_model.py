@@ -17,7 +17,7 @@ class measurement_model():
 		self.y_sub_k = None
 
 	def execute_model(self,state_vetor):
-		self.y_sub_k = self.H_matrix @ state_vetor + self.measurement_noise
+		self.y_sub_k = (self.H_matrix @ state_vetor) + self.measurement_noise
          
 
 	def update_parameters(self):

@@ -4,10 +4,11 @@ import numpy as np
 class state_space_hub():
 	def __init__(self):
 		
+		#sample time of the simulation
 		self.dt = 1.0
 
 		self.x_sub_k_minus_1           = np.array([0.0,0.0,0.0]).T
-		self.u_sub_k_minus_1           = np.array([4.5,0.05]).T
+		self.u_sub_k_minus_1           = np.array([4.5,0.0]).T
 
 		self.F_matrix = np.array([[1.0,0.0,0.0],[0.0,1.0,0.0],[0.0,0.0,1.0]])
 		self.B_matrix = np.array([[np.cos(self.x_sub_k_minus_1[2]) * self.dt,0.0],[np.sin(self.x_sub_k_minus_1[2]),0.0],[0.0,self.dt]])

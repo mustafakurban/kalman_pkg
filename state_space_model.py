@@ -26,8 +26,7 @@ class state_space_model():
                 self.state_noise = veriables.state_noise
 
         def execute_model(self):
-                self.x_sub_k = self.F_matrix @ self.x_sub_k_minus_1 + self.B_matrix @ self.u_sub_k_minus_1 + self.state_noise
-                #self.update_space_veriables()
+                self.x_sub_k = (self.F_matrix @ self.x_sub_k_minus_1 + self.B_matrix @ self.u_sub_k_minus_1) + self.state_noise
 
         def update_parameters(self):
                 self.x_sub_k_minus_1 = self.x_sub_k

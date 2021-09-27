@@ -22,4 +22,4 @@ class rasidual_covariance():
 
 	def execute_model(self,H_matrix,P_sub_k_to_minus_1):
 
-		self.S_sub_k = H_matrix @ P_sub_k_to_minus_1 @ H_matrix.T + self.R_sub_k
+		self.S_sub_k = (H_matrix @ P_sub_k_to_minus_1 @ H_matrix.T) + self.R_sub_k
